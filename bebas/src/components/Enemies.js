@@ -6,29 +6,16 @@ import {Link} from 'react-router-dom';
 class Enemies extends Component {
   constructor() {
     super();
-
     this.state = {
       enemies : []
     }
     this.getEnemies = this.getEnemies.bind(this);
-
   }
 
   componentDidMount() {
     this.getEnemies();
   }
-/*
 
-
-"name": "Luke Skywalker",
-"height": "172",
-"mass": "77",
-"hair_color": "blond",
-"skin_color": "fair",
-"eye_color": "blue",
-"birth_year": "19BBY",
-"gender": "male"
-*/
   getEnemies() {
     axios.get(`http://swapi.co/api/people/`)
     .then(response => {
@@ -42,8 +29,11 @@ class Enemies extends Component {
   render() {
     return (
       <div>
-        <h1>Enemies</h1>
-        <h3>As a big fans of Trump, you have many enemies </h3>
+        <h1 className="title">Enemies</h1>
+        <h3 className="subtitle">
+          As a big fans of Trump, we have many enemies. :( Here top 10 Nemesis of our idol. <br/>
+          Memorize their informations to make sure you wont attack innocent civilian in our FanWAR.
+        </h3>
         <div className="columns is-multiline">
         {
           this.state.enemies.map( (enemy,idx) => (

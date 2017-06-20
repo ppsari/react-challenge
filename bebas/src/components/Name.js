@@ -5,8 +5,6 @@ import Trump from './result/Trump'
 import Face from './result/Face'
 import Content from './template/Content'
 
-
-
 class Name extends Component {
   constructor() {
     super();
@@ -31,17 +29,6 @@ class Name extends Component {
       console.log(err);
     })
   }
-
-  getQuotes() {
-    axios.get(`http://quotesondesign.com/wp-json/posts?filter[orderby]=rand&filter[posts_per_page]=1&callback=`)
-    .then(response => {
-      this.setState({result_quote:response.data[0].content.replace(/<\/?[^>]+(>|$)/g, "")});
-    })
-    .catch(err => {
-      console.log(err);
-    })
-  }
-
   getImage() {
     this.setState({ result_img: `https://api.adorable.io/avatars/285/${this.state.username}.png`})
   }
@@ -55,16 +42,12 @@ class Name extends Component {
     })
   }
 
-  // componentDidMount() {
-  //   this.getQuotes();
-  // }
-
   render() {
     return (
       <div>
-        <h1>What Trump think about you</h1>
+        <h1 className="title">What Trump think about you</h1>
         <div className="columns">
-          <div className="column is-6 is-offset-3">
+          <div className="column is-6">
             <Content
               formSubmit={this.formSubmit}
             />
