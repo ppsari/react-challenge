@@ -29,16 +29,16 @@ const getEnemies = () => dispatch => {
 }
 const getEnemy = (id) => dispatch => {
   let _self = this;
-  console.log('dipanggil action '+id);
+  // console.log('dipanggil action '+id);
   axios.get(`http://swapi.co/api/people/${id}`)
   .then(response => {
-    console.log('tes response enemy'+response.data)
+    // console.log('tes response enemy'+response.data)
     let enemyDt = response.data;
     if (response.data.hasOwnProperty('detail')) {
-      console.log('error'+response.data.detail);
+      // console.log('error'+response.data.detail);
     }
     else {
-      console.log(`${response.data.homeworld}`);
+      // console.log(`${response.data.homeworld}`);
       axios.get(`${response.data.homeworld}`)
       .then(home => {
         enemyDt.homeworld = home.data.name;

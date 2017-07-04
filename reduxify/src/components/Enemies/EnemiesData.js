@@ -1,15 +1,11 @@
 import React, { Component } from 'react';
 import {Link} from 'react-router-dom';
-// import { connect } from 'react-redux';
-
 
 class EnemiesData extends React.Component {
   constructor(props) {
     super(props)
   }
   render() {
-    console.log('---------------------------------------3')
-    // console.log(this.props.enemies);
     return (
       <div className="columns is-multiline">
       {
@@ -37,8 +33,7 @@ class EnemiesData extends React.Component {
 
                 <div className="content">
                   Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                  Phasellus nec iaculis mauris. <a>@bulmaio</a>.
-                  <a>#css</a> <a>#responsive</a>
+                  Phasellus nec iaculis mauris. <a>@bulmaio</a>
                   <br/>
                   <Link to={'/enemy/'+(idx+1)}><button className="button is-dark">View Enemy Detail</button></Link>
                 </div>

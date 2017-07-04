@@ -1,19 +1,16 @@
 import React, { Component } from 'react';
 import {Link} from 'react-router-dom';
-// import { connect } from 'react-redux';
 
 
 class EnemyData extends Component {
   constructor(props) {
     super(props);
-    console.log(this.props.cenemy)
   }
-
 
   render() {
     let dt;
-    if (typeof this.props.cenemy !== 'undefined') {
-      let cenemy = this.props.cenemy
+    if (typeof this.props.enemyDt !== 'undefined') {
+      let cenemy = this.props.enemyDt
       dt =
       <div>
         <h1 className="title">{cenemy.name}</h1>
@@ -49,16 +46,8 @@ class EnemyData extends Component {
     } else {
       <div> We havent get a clear result</div>
     }
-    console.log('---------------------------------------3')
-    // console.log(this.props.enemies);
-    return (
-      <div>
-      {
-        dt
-      }
 
-      </div>
-    );
+    return ( <div> { dt } </div> );
   }
 }
 export default EnemyData;

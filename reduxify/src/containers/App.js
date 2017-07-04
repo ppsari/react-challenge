@@ -7,16 +7,12 @@ import {
     Footer,
     NotFound,
     Trump,
-    // Name,
     Enemies,
     Enemy
   } from '../components'
 import store from '../store';
 
 class App extends Component {
-  // {this.state.result_quote}
-  // <Route exact path="/enemies" component={Enemies}/>
-  // <Route exact path="/enemy/:id" component={Enemy}/>
   constructor() {
     super();
     console.log(store.dispatch);

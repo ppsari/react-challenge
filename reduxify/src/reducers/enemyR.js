@@ -1,5 +1,5 @@
 const initialState = {
-  currEnemy : '',
+  currEnemy : {},
   enemies: []
 }
 
