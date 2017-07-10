@@ -4,7 +4,6 @@ import { connect } from 'react-redux';
 class ContentTrump extends React.Component {
   constructor(props) {
     super(props);
-
   }
   render() {
     const { trump } = this.props;
@@ -22,7 +21,6 @@ class ContentTrump extends React.Component {
 }
 
 const mapStateToProps = (state) => {
-  console.log(state)
   return {
     trump: state.trump
   }

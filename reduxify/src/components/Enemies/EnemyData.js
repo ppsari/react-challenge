@@ -1,12 +1,10 @@
 import React, { Component } from 'react';
 import {Link} from 'react-router-dom';
-// import { connect } from 'react-redux';
 
 
 class EnemyData extends Component {
   constructor(props) {
     super(props);
-    console.log(this.props.cenemy)
   }
 
 
@@ -49,15 +47,8 @@ class EnemyData extends Component {
     } else {
       <div> We havent get a clear result</div>
     }
-    console.log('---------------------------------------3')
-    // console.log(this.props.enemies);
     return (
-      <div>
-      {
-        dt
-      }
-
-      </div>
+      <div>  { dt } </div>
     );
   }
 }

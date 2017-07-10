@@ -1,20 +1,16 @@
 import React, { Component } from 'react';
 import {Link} from 'react-router-dom';
-// import { connect } from 'react-redux';
-
 
 class EnemiesData extends React.Component {
   constructor(props) {
     super(props)
   }
   render() {
-    console.log('---------------------------------------3')
-    // console.log(this.props.enemies);
     return (
       <div className="columns is-multiline">
       {
         (typeof this.props.data !== 'undefined')  ?
-        this.props.data.map( (enemy,idx) =>
+          this.props.data.map( (enemy,idx) =>
           (<div className=" column is-3" key={idx.toString()}>
             <div className="card">
               <div className="card-image">
@@ -46,7 +42,6 @@ class EnemiesData extends React.Component {
             </div>
           </div>) ): ''
       }
-
       </div>
     );
   }
