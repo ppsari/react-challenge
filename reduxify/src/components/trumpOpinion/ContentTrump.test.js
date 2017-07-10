@@ -6,15 +6,15 @@ import { Provider } from 'react-redux';
 import store from '../../store/index';
 
 describe('<ContentTrump /> ', () => {
-  // const contentWrapper = shallow(<ContentTrump />);
+  const contentWrapper = shallow(<ContentTrump />);
   /*
     ============
     OUTPUT TESTS
     ============
   */
-  // it('renders correctly', () => {
-  //  expect(contentWrapper).toHaveLength(1);
-  // });
+  it('renders correctly', () => {
+   expect(contentWrapper).toHaveLength(1);
+  });
   // it('renders a <div>', () => {
   //   const div = contentWrapper.find(div);
   //   expect(div).toHaveLength(1);

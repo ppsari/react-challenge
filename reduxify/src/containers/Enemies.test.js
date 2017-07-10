@@ -9,13 +9,15 @@ import store from '../store/index';
 
 describe('<Enemies /> ', () => {
   const enemiesWrapper = shallow(<Enemies />);
+  const enemiesPWrapper = mount(<Provider store={store}><Enemies /></Provider>);
+
   /*
     ============
     OUTPUT TESTS
     ============
   */
   it('renders correctly', () => {
-   expect(enemiesWrapper).toHaveLength(1);
+   expect(enemiesPWrapper).toHaveLength(1);
   });
 
   it('renders a <h1>', () => {
@@ -30,7 +32,9 @@ describe('<Enemies /> ', () => {
 
   it('renders a <EnemiesData>', () => {
     //belum ada currEnemy jadi harus kosong
-    const enemyData = enemiesWrapper.find(EnemiesData);
+    const enemyData = enemiesPWrapper.find(EnemiesData);
+    console.log('---------------------------')
+    console.log(enemyData.length)
     expect(enemyData).toHaveLength(0);
   });
 

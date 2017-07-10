@@ -46,6 +46,9 @@ const getEnemy = (id) => dispatch => {
         .then(species=> {
           enemyDt.species = species.data.name;
           enemyDt.finishLoad = true
+
+
+          // console.log(enemyDt)
           dispatch({
             type: 'GET_ENEMY',
             result: {currEnemy: enemyDt}

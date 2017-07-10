@@ -8,7 +8,7 @@ import {Enemy} from './Enemy';
 import store from '../store/index';
 
 describe('<Enemy /> ', () => {
-  const enemyWrapper = shallow(<Enemy />);
+  const enemyWrapper = shallow(<Provider store={store}><Enemy /></Provider>);
   /*
     ============
     OUTPUT TESTS

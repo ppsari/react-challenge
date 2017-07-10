@@ -33,7 +33,6 @@ describe('<Trump /> ', () => {
     expect(contentTrump).toHaveLength(1);
   });
 
-
   /*
     ============
     STATE TESTS
