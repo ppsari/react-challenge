@@ -34,4 +34,15 @@ describe('<FrmTrump /> ', () => {
     const usernameState = frmWrapper.state('username')
     expect(usernameState).toEqual('')
   });
+  /*
+    ============
+    EVENT TESTS
+    ============
+  */
+  it('should have changeUsername state', () => {
+    let newUsername = 'poppy';
+    frmWrapper.instance().changeUsername(newUsername)
+    let usernameState = frmWrapper.state('username')
+    expect(usernameState).toEqual(newUsername)
+  });
 })

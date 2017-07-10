@@ -23,11 +23,7 @@ export class Enemy extends Component {
     dt = typeof this.props.currEnemy != 'undefined' ?
       (<EnemyData cenemy={this.props.currEnemy}/>) :
       (<div> Searching...</div>)
-    return (
-      <div>
-        {dt}
-      </div>
-    );
+    return ( <div> {dt} </div> );
   }
 }
 
