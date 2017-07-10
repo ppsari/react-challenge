@@ -6,7 +6,7 @@ import { Provider } from 'react-redux';
 import store from '../../store/index';
 
 describe('<FrmTrump /> ', () => {
-  // const frmWrapper = shallow(<FrmTrump />);
+  const frmWrapper = shallow(<FrmTrump />);
   /*
     ============
     OUTPUT TESTS
@@ -24,4 +24,14 @@ describe('<FrmTrump /> ', () => {
   //   const div = frmWrapper.find(div).find(div);
   //   expect(div).toHaveLength(2);
   // });
+
+  /*
+    ============
+    STATE TESTS
+    ============
+  */
+  it('should have username state', () => {
+    const usernameState = frmWrapper.state('username')
+    expect(usernameState).toEqual('')
+  });
 })

@@ -34,5 +34,16 @@ describe('<Trump /> ', () => {
   });
 
 
+  /*
+    ============
+    STATE TESTS
+    ============
+  */
+  it('should have username state', () => {
+    const usernameState = trumpWrapper.state('username')
+    expect(usernameState).toEqual('')
+  });
+
+
 
 })
